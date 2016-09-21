@@ -1,0 +1,57 @@
+/*
+ * Stars
+ *
+ */
+
+.star-wrapper {
+	width: 156px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.star {
+	float: right;
+	position: relative;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+
+	.icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+
+	&.star2 {
+		margin: 0 30px;
+	}
+
+	.icon-star1 {
+		display: none;
+
+		.icons-background {
+			fill: @color-Primary;
+		}
+	}
+
+	.icon-star2 {
+		.icons-background {
+			fill: @color-Muted;
+		}
+	}
+}
+
+.star-input {
+	.sr-only();
+
+	&:checked ~ .star {
+		.icon-star1 {
+			display: block;
+		}
+
+		.icon-star2 {
+			display: none;
+		}
+	}
+}

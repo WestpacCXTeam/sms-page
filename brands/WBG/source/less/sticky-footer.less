@@ -1,0 +1,38 @@
+/*
+ * Sticky footer
+ *
+ */
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+.content {
+	min-height: 100%;
+	margin-bottom: -36px;
+	overflow: hidden;
+
+	.done & {
+		margin-bottom: -60px
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		height: 60px;
+
+		.done & {
+			height: 60px;
+		}
+	}
+}
+
+footer {
+	height: 36px;
+
+	.done & {
+		height: 60px;
+	}
+}

@@ -1,0 +1,103 @@
+/*
+ * Site structure
+ *
+ */
+
+header {
+	.getBrand() when (@brand = BOM) {
+		.logo() {
+			width: 150px;
+		}
+	}
+	.getBrand() when (@brand = BSA) {
+		.logo() {
+			width: 90px;
+		}
+	}
+	.getBrand() when (@brand = STG) {
+		.logo() {
+			width: 170px;
+		}
+	}
+	.getBrand() when (@brand = WBC) {
+		.logo() {
+			width: 69px;
+		}
+	}
+	.getBrand() when (@brand = WBG) {
+		.logo() {
+			width: 180px;
+		}
+	}
+	.getBrand() when (@brand = BT) {
+		.logo() {
+			width: 180px;
+		}
+	}
+	.getBrand();
+
+	.symbol.symbol-logo-tablet {
+		margin: 10px 0 16px 0;
+
+		.logo();
+	}
+}
+
+.lead {
+	margin: 11px 0;
+	font-size: 18px;
+}
+
+.star-wrapper {
+	margin-top: 18px;
+	margin-bottom: 18px;
+}
+
+.btn.more-btn {
+	margin: 24px 0;
+}
+
+.feedback {
+	margin: 0.5em 0;
+}
+
+.more-info {
+	height: 8em;
+}
+
+.submit {
+	margin-top: 24px;
+}
+
+.done-btn {
+	margin-bottom: 24px;
+}
+
+// main {}
+
+footer {
+	border-top: 1px solid @color-Border;
+	background: #fff;
+	overflow: hidden;
+
+	.footer-list {
+		list-style: none;
+		padding: 0;
+		margin: 0.5em 0;
+		text-align: center;
+	}
+
+	.footer-list-item,
+	.footer-list-item-right {
+		display: inline-block;
+	}
+
+	.footer-list-item {
+		margin-right: 1em;
+	}
+
+	.done & {
+		border: none;
+		background: transparent;
+	}
+}
