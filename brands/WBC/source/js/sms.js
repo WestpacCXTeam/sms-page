@@ -63,7 +63,7 @@
 
 		$('.js-rating:checked').trigger('change');
 
-		$('.js-more-btn').on('click', GUI.sms.showMore );
+		$('.js-more-btn').on('click', GUI.sms.toggleMore );
 	};
 
 
@@ -102,11 +102,11 @@
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// show the textarea and hide the rest
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------
-	module.showMore = function smsRenderFeedback() {
-		GUI.debugging( 'sms: running showMore', 'report' );
+	module.toggleMore = function smsRenderFeedback() {
+		GUI.debugging( 'sms: running toggleMore', 'report' );
 
-		$('.js-feedback').addClass('is-hidden');
-		$('.js-more-info').removeClass('is-hidden');
+		$('.js-feedback').toggleClass('is-hidden');
+		$('.js-more-info').toggleClass('is-hidden');
 	};
 
 
